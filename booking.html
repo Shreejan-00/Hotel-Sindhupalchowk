@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book your stay at Hotel Sindhupalchowk">
+    <title>Booking - Hotel Sindhupalchowk</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">
+                    Hotel Sindhupalchowk
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="rooms.html">Rooms</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="booking.html">Booking</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Header -->
+        <section class="page-header-small">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12 text-center text-white">
+                        <h1 class="fw-bold">Book Your Stay</h1>
+                        <p class="lead">Reserve your room at Hotel Sindhupalchowk</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Booking Form Section -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-body p-5">
+                                <h3 class="fw-bold mb-4">Reservation Form</h3>
+                                
+                                <form id="bookingForm" class="needs-validation" novalidate>
+                                    <!-- Personal Information -->
+                                    <h5 class="fw-bold mb-3">Personal Information</h5>
+                                    
+                                    <div class="row g-3 mb-4">
+                                        <div class="col-md-6">
+                                            <label for="fullName" class="form-label">Full Name *</label>
+                                            <input type="text" class="form-control" id="fullName" required>
+                                            <div class="invalid-feedback">Please enter your full name.</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="email" class="form-label">Email Address *</label>
+                                            <input type="email" class="form-control" id="email" required>
+                                            <div class="invalid-feedback">Please enter a valid email address.</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="phone" class="form-label">Phone Number *</label>
+                                            <input type="tel" class="form-control" id="phone" required>
+                                            <div class="invalid-feedback">Please enter your phone number.</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Room Selection -->
+                                    <h5 class="fw-bold mb-3">Room Details</h5>
+                                    
+                                    <div class="row g-3 mb-4">
+                                        <div class="col-md-6">
+                                            <label for="roomType" class="form-label">Room Type *</label>
+                                            <select class="form-select" id="roomType" required>
+                                                <option value="">Select a room...</option>
+                                                <option value="standard">Standard Room - Rs. 2,500/night</option>
+                                                <option value="deluxe">Deluxe Room - Rs. 4,500/night</option>
+                                                <option value="family">Family Suite - Rs. 7,500/night</option>
+                                            </select>
+                                            <div class="invalid-feedback">Please select a room type.</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="guests" class="form-label">Number of Guests *</label>
+                                            <select class="form-select" id="guests" required>
+                                                <option value="">Select...</option>
+                                                <option value="1">1 Guest</option>
+                                                <option value="2">2 Guests</option>
+                                                <option value="3">3 Guests</option>
+                                                <option value="4">4 Guests</option>
+                                                <option value="5+">5+ Guests</option>
+                                            </select>
+                                            <div class="invalid-feedback">Please select number of guests.</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="checkIn" class="form-label">Check-in Date *</label>
+                                            <input type="date" class="form-control" id="checkIn" required>
+                                            <div class="invalid-feedback">Please select a check-in date.</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="checkOut" class="form-label">Check-out Date *</label>
+                                            <input type="date" class="form-control" id="checkOut" required>
+                                            <div class="invalid-feedback">Please select a check-out date.</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Special Requests -->
+                                    <div class="mb-4">
+                                        <label for="specialRequests" class="form-label">Special Requests (Optional)</label>
+                                        <textarea class="form-control" id="specialRequests" rows="3" placeholder="Any special requirements or preferences..."></textarea>
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <div class="d-grid">
+                                        <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">Submit Booking</button>
+                                    </div>
+                                </form>
+
+                                <!-- Success Message (hidden by default) -->
+                                <div id="successMessage" class="alert alert-success mt-4 d-none">
+                                    <h5 class="alert-heading">Booking Submitted!</h5>
+                                    <p class="mb-0">Thank you for your booking request. We will contact you shortly to confirm your reservation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Booking Info Sidebar -->
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body p-4">
+                                <h5 class="fw-bold mb-3">Booking Information</h5>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-2">
+                                        <strong>Check-in:</strong> 12:00 PM onwards
+                                    </li>
+                                    <li class="mb-2">
+                                        <strong>Check-out:</strong> 11:00 AM
+                                    </li>
+                                    <li class="mb-2">
+                                        <strong>Cancellation:</strong> Free up to 48 hours before
+                                    </li>
+                                </ul>
+                                <hr>
+                                <h6 class="fw-bold mb-2">Contact for Help</h6>
+                                <p class="mb-1">Phone: +977-1-XXXXXXX</p>
+                                <p class="mb-0">Email: booking@hotelsindhupalchowk.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="fw-bold">Hotel Sindhupalchowk</h5>
+                    <p class="mb-0">Your home away from home</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">&copy; 2024 Hotel Sindhupalchowk. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
