@@ -2,9 +2,11 @@
 
 A modern, responsive hotel website built with HTML, CSS, Bootstrap 5, and JavaScript.
 
-## 🌐 Website
+## 🌐 Live Website
 
-**Live URL**: http://localhost:8000
+**GitHub Pages URL**: https://shreejan-00.github.io/Hotel-Sindhupalchowk/
+
+**Local URL**: http://localhost:8000
 
 ## 📁 Project Structure
 
@@ -79,11 +81,11 @@ python -m http.server 8000
 http://localhost:8000
 ```
 
-### GitHub Deployment
+### GitHub Pages Deployment
 
-1. Push to GitHub repository
-2. Go to Repository Settings → Pages
-3. Deploy from master/main branch
+The site is automatically deployed from the `gh-pages` branch.
+
+**Live URL**: https://shreejan-00.github.io/Hotel-Sindhupalchowk/
 
 ## 📄 License
 
@@ -92,3 +94,8 @@ This project is for educational purposes.
 ## 👨‍💻 Developer
 
 Built with ❤️ for Hotel Sindhupalchowk
+
+## 🔗 Links
+
+- **Repository**: https://github.com/Shreejan-00/Hotel-Sindhupalchowk
+- **Live Website**: https://shreejan-00.github.io/Hotel-Sindhupalchowk/
